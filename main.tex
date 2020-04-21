@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt,a4paper,ragged2e,academicons]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=.5cm,right=8.25cm,marginparwidth=7cm,marginparsep=.5cm,top=.5cm,bottom=.5cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Gill Sans}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{colorlinks,
+urlcolor = Cerulean,
+linkcolor = Cerulean
+}
+\usepackage{everysel}
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faPencil}
+
+%% sample.bib contains your publications
+%\addbibresource{sample.bib}
+\setlength{\RaggedRightRightskip}{0pt plus 4em}
+
+\begin{document}
+\RaggedRight
+\name{Introduction to the Study of Language and Linguistics} 
+\tagline{LING 2110 (fka LING 101) section 001, CRN 51031;\\ aka Introduction to Linguistic Anthropology: \\ANTH 1155 (fka ANTH 110) section 001, CRN 50037}
+\photo{7cm}{download.png}
+\personalinfo{\printinfo{\faUser}{Lindsay Morrone}\printinfo{\faVenus}{she/her/hers}\email{lindsaymorrone@unm.edu}
+\location{Humanities Bldg room 148}\printinfo{\faGraduationCap}{Department of Linguistics}
+\printinfo{\faCalendar}{Office hours Weds 3:45-5:00 \& by appointment}
+\printinfo{\faUniversity}{University of New Mexico}
+%\printinfo{\faWifi}{course home: \url{https://learn.unm.edu}}
+ % \phone{000-00-0000}
+%  \mailaddress{Address, Street, 00000 County}
+%  \twitter{@twitterhandle}
+ % \linkedin{linkedin.com/in/yourid}
+ % \github{github.com/yourid}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+ %  \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}\makecvheader \end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+ \AtBeginEnvironment{itemize}{\small}
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\vspace{-5mm}
+\cvsection[page1sidebar]{Course Objectives \faLanguage}
+
+\smallskip
+
+%\cvevent{Intended to fulfill breadth requirements in any college. Meets New Mexico Lower-Division General Education Common Core Curriculum Area IV: Social/Behavioral Sciences.}{Broad overview of the nature of language:}{}{}
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\hspace{-9mm}\wheelchart{2cm}{.5cm}{%
+4/11em/accent!95/Comprehend how language evolves over history and over an individual's lifespan,
+8/8em/accent!20/Understand basic concepts \& terminology associated with phonetics phonology morphology syntax semantics \& pragmatics,
+4/11em/accent!35/Be aware of relations among the world's languages btwn dialects \& slang and btwn human \& nonhuman languages,
+8/15em/accent!40/Describe common mistaken beliefs about language; distinguish btwn descriptivism \& prescriptivism,
+2/12em/accent!5/Describe social psychological geographic \& historical influences that lead to language dominance or endangerment,
+6/11em/accent!65/Apply methods of linguistic\\ analysis as introduced in the course,
+2/12em/accent!50/Critically engage with linguistic research,
+4/16em/accent!80/Stimulate curiosity about language and what it reveals about the human mind
+}
+
+\smallskip
+
+\addnextpagesidebar[-1ex]{page2sidebar}
+\cvsection{Policies \faGavel}
+\cvevent{}{General}{}{}
+    \begin{itemize}
+    		\item It is the student's responsibility to \textbf{read this syllabus}, be aware of expectations of the course, and keep up with the course schedule, which is subject to changes. 
+		\item Regularly accessing the Learn homepage, in addition to attending class, is essential and expected. Both are necessary to keep up with assignments and announcements, including changes to the course schedule.
+		\item Students are responsible for using the \href{https://learn.unm.edu/webapps/bb-mygrades-BBLEARN/myGrades?course_id=_83571_1&stream_name=mygrades&is_stream=false#_5220464_1}{My Grades} tool to track their progress in the course. \textbf{Concerns about progress in the course should be addressed with the instructor} \textit{prior to the last week of the semester}.  
+\item Academic integrity will be taken seriously in this course. Any student judged to have engaged in academic dishonesty in course work may receive a reduced or failing grade for the work in question and/or for the course. Academic dishonesty includes, but is not limited to: dishonesty in quizzes, tests, or assignments;
+       claiming credit for work not done or done by others;
+       hindering the academic work of other students.
+	\end{itemize}
+	\smallskip
+\cvevent{}{Late Work}{}{}	
+\begin{itemize}
+			\item Late assignments will receive a \textbf{50$\%$ grade deduction.} It is crucial to be organized and submit all quizzes, blogs, etc. by the due dates listed in the Course Schedule located on our course home page. 
+			\item Exceptions to the Late Work policy will be granted in the case of extenuating circumstances, e.g. documented medical emergencies. Anticipated problems with an upcoming due date must be \textbf{communicated to the instructor at least one week in advance} to make alternative arrangements.	
+			\item Assignments submitted late due to technical issues with Learn will be exempt from the Late Work policy only if written documentation from the UNM Learn Support team is provided. It is advised that students pay attention to announced Learn outages and begin assignments in a timely manner to avoid unforeseen technical issues.
+\end{itemize}
+\smallskip
+\cvevent{}{Technical}{}{}
+\begin{itemize}
+\item \textbf{\emph{Prior to contacting the instructor}, in the event of technical issues when using Learn,} \href{http://online.unm.edu/help/learn/support/index.html}{create a support ticket} to request help from UNM's Learn Support team. If you experience technical issues when using Learn, \textbf{\emph{before} you contact the instructor}, browse through the \href{http://online.unm.edu/help/learn/students/}{Student Help Links} on the \href{https://online.unm.edu/help/}{UNM Learn Documentation Site}. 24/7 phone support from the Learn Support Team is available at 505--277--0857 (local) or 1--877--688--8817 (toll free).
+\item Internet connection is required to access the web component. Many on--campus locations offer free high--speed internet access including \href{http://it.unm.edu/pods/locations.html}{UNM's Computer Pods}. Any computer capable of running a recently updated web browser should be sufficient to access the course's web component. Check for browser/operating system support \href{https://help.blackboard.com/Learn/Student/Getting_Started/Browser_Support/Browser_Checker}{here \faExternalLink}. 
+\item When interacting online for assignments, students are expected to apply \href{http://www.albion.com/netiquette/introduction.html}{basic netiquette principles}, e.g. remember that you are interacting with human classmates, do not perpetuate \href{http://www.albion.com/netiquette/rule7.html}{flame wars}, don't be afraid to share what you know, know what you are talking about and make sense, etc.  Netiquette refers to a set of guidelines in online communication to ensure positive interactions. See ``The Core Rules of Netiquette''  \href{http://www.albion.com/netiquette/corerules.html}{excerpted from Virginia Shea} for more detailed information. 
+\end{itemize}
+
+\smallskip
+
+
+
+\cvsection{Statements \faQuoteLeft ...\faQuoteRight}
+\hspace{-3mm}
+
+
+\hspace{-3mm}
+\cvachievement{\faHourglassHalf}{This is a 3 credit--hour course}{Class meets for three 50--minute sessions of direct instruction.  Students are expected to complete a \emph{minimum} of six hours of out--of--class work (or homework, study, assignment completion, class preparation, etc.) each week.}
+
+\divider
+
+\hspace{-3mm}
+\cvachievement{\faUniversalAccess}{Accommodations}{In accordance with University Policy 2310 and the Americans with Disabilities Act (ADA), academic accommodations may be made for any student who notifies the instructor of the need for an accommodation. It is imperative that you take the initiative to bring such needs to the instructor’s attention, as I am not legally permitted to inquire. Students who may require assistance in emergency evacuations should contact the instructor as to the most appropriate procedures to follow. Contact Accessibility Resource Center at 277-3506 for additional information. If you need an accommodation based on how course requirement interact with the impact of a disability, you should contact me to arrange an appointment as soon as possible. At the appointment we can discuss the course format and requirements, anticipate the need for adjustments and explore potential accommodations. I rely on the Disability Services Office for assistance in developing strategies and verifying accommodation needs. If you have not previously contacted them I encourage you to do so.}
+
+\divider
+
+%\hspace{-3mm}
+%\cvachievement{\faGlobe}{Immigration Status and Citizenship}{All students are welcome in this class regardless of citizenship, residency, or immigration status.  The instructor will respect your privacy if you choose to disclose your status.  UNM has made a core commitment to the success of all our students, including members of our undocumented community. See the \href{http://undocumented.unm.edu/}{Administration's welcome \faExternalLink} for more.}
+%
+%\divider
+
+\hspace{-3mm}
+\cvachievement{\faSupport}{Discrimination, Harassment, \& Sexual Violence}{TITLE IX Statement: If you experience sexual harassment, misconduct or violence, there are confidential reporting locations on campus: \href{http://loborespect.unm.edu/advocacy-center/contact.html}{LoboRESPECT Advocacy Center}, \href{https://women.unm.edu/services/services.html}{Women's Resource Center}, and the \href{http://lgbtqrc.unm.edu/services/counseling.html}{LGBTQ Resource Center}. As your instructor, I am also ready to support any student facing these issues, but I am required to report student disclosures of this type of discrimination to the Title IX Coordinator at the \href{http://oeo.unm.edu}{Office of Equal Opportunity} (OEO). When such a report is submitted to OEO, they will send you an email to notify you of the report and set up a meeting with them regarding the incident. However, you are \uppercase{not} required to respond to the email or follow up on the report if you do not wish the University to pursue an investigation of the incident. More
+information on the campus policy regarding sexual misconduct can be found \href{https://policy.unm.edu/university-policies/2000/2740.html}{here \faExternalLink}.}
+
+
+
+
+
+
+%\smallskip
+
+%\clearpage
+%\begin{fullwidth}
+%\cvsection{Instructional Materials}
+
+%\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Articles}},type=article]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faFilm}{Multimedia}},type=inproceedings]
+%\end{fullwidth}
+
+
+
+\end{document}
